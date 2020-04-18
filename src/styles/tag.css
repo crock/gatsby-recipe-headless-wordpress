@@ -1,0 +1,15 @@
+.tag {
+    width: 100%;
+}
+
+.tag > h2 {
+    font-weight: bold;
+    line-height: 1.25rem;
+    color: black;
+    font-size: 1.75rem;
+}
+
+.tag > p {
+    line-height: 1.75rem;
+    color: #797979;
+}

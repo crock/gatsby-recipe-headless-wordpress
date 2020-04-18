@@ -1,0 +1,16 @@
+.category {
+    width: 100%;
+}
+
+.category > h2 {
+    font-weight: bold;
+    line-height: 1.25rem;
+    color: black;
+    font-size: 1.75rem;
+}
+
+.category > p {
+    line-height: 1.75rem;
+    color: #797979;
+}
+

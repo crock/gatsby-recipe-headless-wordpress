@@ -19,15 +19,17 @@ Next, in either an existing Gatsby site or a brand new Gatsby site, you can run 
 
 **REST API**
 ```
-gatsby recipes https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/headless-wordpress-restapi.mdx
+gatsby recipes https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/wordpress-restapi.mdx
 ```
 
 **WPGraphQL**
 ```
-gatsby recipes https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/headless-wordpress-wpgraphql.mdx
+gatsby recipes https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/wordpress-wpgraphql.mdx
 ```
 
 These command will create some rudimentary styles and basic templates in your Gatsby installation and add an example `gatsby-node.example.js` for you to reference. It will not overwrite your existing gatsby-node.js file. Be sure to rename `gatsby-node.example.js` to `gatsby-node.js` after copying over your existing code.
+
+**UPDATE: Gatsby CLI v2.11.22 has added support for generating initial plugin config options, so the below steps is no longer necessary.**
 
 As of Gatsby CLI v2.11.11, the Gatsby Recipes do not support adding default options to a plugin defined in `gatsby-config.js`. As soon as it does, this repo will be updated to include some default options.
 

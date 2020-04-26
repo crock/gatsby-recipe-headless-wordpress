@@ -13,7 +13,11 @@ Install necessary NPM packages
 Install necessary Gatsby Plugins
 Configuration options are required for this plugin, but it is not supported by Gatsby Recipes api yet, so you will have to do this manually.
 
-<GatsbyPlugin name="gatsby-source-graphql" />
+<GatsbyPlugin name="gatsby-source-graphql" options={{
+  typeName: 'WORDPRESS',
+  fieldName: 'wordpress',
+  url: 'https://cms.digipresence.org/admintuts/graphql',
+}} />
 
 ---
 

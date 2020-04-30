@@ -32,7 +32,7 @@ Configuration options are required for this plugin, but it is not supported by G
 Setup necessary files
 
 <File
-  path="gatsby-node.example.js"
+  path="./plugins/gatsby-plugin-wordpress/gatsby-node.js"
   content="https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/gatsby-node.restapi.js"
 />
 
@@ -88,5 +88,10 @@ Setup necessary files
 
 ---
 
+Intall local Gatsby plugin
+
+<GatsbyPlugin name="gatsby-plugin-wordpress" />
+
+---
+
 You are good to go!
-IMPORTANT: Be sure to rename gatsby-node.example.js to gatsby-node.js after copying over your existing code.

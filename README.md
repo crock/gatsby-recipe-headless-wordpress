@@ -27,7 +27,7 @@ gatsby recipes https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wo
 gatsby recipes https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/wordpress-wpgraphql.mdx
 ```
 
-These command will create some rudimentary styles and basic templates in your Gatsby installation and add an example `gatsby-node.example.js` for you to reference. It will not overwrite your existing gatsby-node.js file. Be sure to rename `gatsby-node.example.js` to `gatsby-node.js` after copying over your existing code.
+These commands will create some rudimentary styles and basic templates in your Gatsby installation.
 
 **UPDATE: Gatsby CLI v2.11.22 has added support for generating initial plugin config options, so the below steps is no longer necessary.**
 

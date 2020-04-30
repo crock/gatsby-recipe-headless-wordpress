@@ -10,17 +10,6 @@ Install necessary NPM packages
 
 ---
 
-Install necessary Gatsby Plugins
-Configuration options are required for this plugin, but it is not supported by Gatsby Recipes api yet, so you will have to do this manually.
-
-<GatsbyPlugin name="gatsby-source-graphql" options={{
-  typeName: 'WORDPRESS',
-  fieldName: 'wordpress',
-  url: 'https://cms.digipresence.org/admintuts/graphql',
-}} />
-
----
-
 Setup necessary files
 
 <File
@@ -28,6 +17,10 @@ Setup necessary files
   content="https://raw.githubusercontent.com/crock/gatsby-recipe-headless-wordpress/master/gatsby-node.wpgraphql.js"
 />
 
+<File
+  path="./plugins/gatsby-plugin-graphql/package.json"
+  content="https://gist.githubusercontent.com/crock/8e310872e9b3dd6753ee4d63f33a05f8/raw/d9b5df87d7eb1f72e3724f9ba1ba4799210dabad/package.json"
+/>
 
 <File
   path="src/templates/post.js"
@@ -79,7 +72,13 @@ Setup necessary files
 />
 ---
 
-Intall local Gatsby plugin
+Install necessary Gatsby Plugins
+
+<GatsbyPlugin name="gatsby-source-graphql" options={{
+  typeName: 'WORDPRESS',
+  fieldName: 'wordpress',
+  url: 'https://cms.digipresence.org/admintuts/graphql',
+}} />
 
 <GatsbyPlugin name="gatsby-plugin-graphql" />
 

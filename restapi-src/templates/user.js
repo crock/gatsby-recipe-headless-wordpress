@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import '../styles/user.css'
+import Layout from '../components/layout'
 
 const UserTemplate = ({data}) => {
     const { name, description, url, avatar_urls } = data.wordpressWpUsers
 
-    return <>
-        <div className="user">
-            <img src={avatar_urls.wordpress_96} alt={`${name}\'s Avatar`} />
-            <h2 dangerouslySetInnerHTML={{ __html: name }}></h2>
-            <div className="bio" dangerouslySetInnerHTML={{ __html: description }}></div>
-            <a className="btn-external" href={url} target="new">External Link</a>
+    return <Layout>
+        <div className="user" style={{display: 'flex', flexDirection: 'column'}}>
+            Author Avatar: <img src={avatar_urls.wordpress_96} alt={`${name}'s Avatar`} />
+            Author Name: <h1 dangerouslySetInnerHTML={{ __html: name }}></h1>
+            Author Bio: <div className="bio" dangerouslySetInnerHTML={{ __html: description }}></div>
+            Author Homepage: <a className="btn-external" href={url} target="new">External Link</a>
         </div>
-    </>
+    </Layout>
 } 
 
 export const query = graphql`

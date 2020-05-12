@@ -1,16 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import '../styles/page.css'
+import Layout from '../components/layout'
 
 const PageTemplate = ({data}) => {
-    const { id, title, content } = data.wordpressPage
+    const { title, content } = data.wordpressPage
 
-    return <>
-        <div className="page">
-            <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
-            <div className="page-content" dangerouslySetInnerHTML={{ __html: content }}></div>
+    return <Layout>
+        <div className="page" style={{display: 'flex', flexDirection: 'column'}}>
+            Page Title: <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
+            Page Content: <div className="page-content" dangerouslySetInnerHTML={{ __html: content }}></div>
         </div>
-    </>
+    </Layout>
 } 
 
 export const query = graphql`

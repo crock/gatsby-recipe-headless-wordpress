@@ -1,16 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import '../styles/tag.css'
+import Layout from '../components/layout'
 
 const TagTemplate = ({data}) => {
     const { name, description, count } = data.wordpressTag
 
-    return <>
-        <div className="tag">
-            <h2 dangerouslySetInnerHTML={{ __html: name }}> <span class="tag-count">({count})</span></h2>
-            <p dangerouslySetInnerHTML={{ __html: description }}></p>
+    return <Layout>
+        <div className="tag" style={{display: 'flex', flexDirection: 'column'}}>
+            Tag Name: <h1 dangerouslySetInnerHTML={{ __html: name }}></h1>
+            Tag Count: <div class="tag-count">({count})</div>
+            Tag Description: <p dangerouslySetInnerHTML={{ __html: description }}></p>
         </div>
-    </>
+    </Layout>
 } 
 
 export const query = graphql`

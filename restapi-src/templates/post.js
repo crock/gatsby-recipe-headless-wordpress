@@ -1,17 +1,17 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import '../styles/post.css'
+import Layout from '../components/layout'
 
 const PostTemplate = ({data}) => {
-    const { id, title, content, date, author, excerpt, sticky, categories, tags } = data.wordpressPost
+    const { title, content, date, author, excerpt, categories, tags } = data.wordpressPost
 
-    return <>
-        <article className="post">
+    return <Layout>
+        <article className="post" style={{display: 'flex', flexDirection: 'column'}}>
 
-            <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
-            <p dangerouslySetInnerHTML={{ __html: excerpt }}></p>
+            Post Title: <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
+            Post Excerpt: <p dangerouslySetInnerHTML={{ __html: excerpt }}></p>
 
-            <div className="post-meta">
+            <div className="post-meta"  style={{display: 'flex', flexDirection: 'row'}}>
                 <span>
                 Posted by <Link to={`/user/${author.slug}`}>{author.name}</Link>
                 </span>
@@ -19,6 +19,7 @@ const PostTemplate = ({data}) => {
                 <span>{date}</span>
                 {`|`}
                 <div className="categories">
+                    Post Categories:
                     {
                         categories.map(cat => (
                             <Link className="cat" key={cat.id} to={`/categories/${cat.slug}`}>
@@ -29,6 +30,7 @@ const PostTemplate = ({data}) => {
                 </div>
                 {`|`}
                 <div className="tags">
+                    Post Tags:
                     {
                         tags.map(tag => (
                             <Link className="tag" key={tag.id} to={`/tags/${tag.slug}`}>
@@ -38,9 +40,9 @@ const PostTemplate = ({data}) => {
                     }
                 </div>
             </div>
-            <div className="post-content" dangerouslySetInnerHTML={{ __html: content }}></div>
+            Post Body: <div className="post-content" dangerouslySetInnerHTML={{ __html: content }}></div>
         </article>
-    </>
+    </Layout>
 } 
 
 export const query = graphql`

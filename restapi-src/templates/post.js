@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
 
 const PostTemplate = ({data}) => {
     const { title, content, date, author, excerpt, categories, tags } = data.wordpressPost
 
-    return <Layout>
+    return <>
         <article className="post" style={{display: 'flex', flexDirection: 'column'}}>
 
             Post Title: <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
@@ -42,7 +41,7 @@ const PostTemplate = ({data}) => {
             </div>
             Post Body: <div className="post-content" dangerouslySetInnerHTML={{ __html: content }}></div>
         </article>
-    </Layout>
+    </>
 } 
 
 export const query = graphql`
